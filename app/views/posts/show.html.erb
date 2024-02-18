@@ -1,6 +1,6 @@
 <%= render @post %>
 
-<div class="btn-grpup my-5">
+<div class="btn-group my-5">
   <%= link_to "Edit", edit_post_path(@post), class: "btn btn-sm btn-outline-dark" %>
   <%= link_to "Back", posts_path, class: "btn btn-sm btn-outline-dark" %>
   <%= button_to "Destroy", @post, method: :delete, class: "btn btn-sm btn-outline-dark" %>

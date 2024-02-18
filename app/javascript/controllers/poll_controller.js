@@ -1,7 +1,8 @@
-import { Controller } from "@hotwired/stimulus"
+import ContentLoader from 'stimulus-content-loader'
 
-// Connects to data-controller="poll"
-export default class extends Controller {
+export default class extends ContentLoader {
   connect() {
+    super.connect()
+    console.log('Do what you want here.')
   }
 }

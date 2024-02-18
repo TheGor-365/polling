@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ show edit update destroy view_count ]
 
   def index
     @posts = Post.all
@@ -14,6 +14,10 @@ class PostsController < ApplicationController
   end
 
   def edit; end
+
+  def view_count
+    render partial: 'posts/view_count', locals: { post: @post }
+  end
 
   def create
     @post = Post.new(post_params)

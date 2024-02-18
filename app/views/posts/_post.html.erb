@@ -10,9 +10,10 @@
       <%= post.body %>
     </p>
 
-    <p>
-      <strong>Views:</strong>
-      <%= post.views %>
-    </p>
+    <div
+      data-controller="poll"
+      data-poll-url-value="<%= view_count_path(post) %>"
+      data-poll-refresh-interval-value="5000">
+    </div>
   </div>
 </div>
